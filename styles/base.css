@@ -1,0 +1,26 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    align-items: center;
+}
+header{
+    /*grid-row: 1/2;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-column: 1/12;
+    background-color: red;
+    width: 100%;
+}
+header img{
+    grid-row: 1/2;;
+    z-index:2;
+}
+header ul li{
+    display: inline-block;
+}
