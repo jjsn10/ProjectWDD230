@@ -1,7 +1,7 @@
 const temp = document.getElementById('temp');
 const condition = document.getElementById('condition');
 const humidity = document.getElementById('humidity');
-const weather_icon = document.getElementById('forecast-icon-1')
+const weather_icon = document.getElementById('forecast-icon-1');
 const day_one = document.getElementById('day-one');
 /*Getting Weather Forecast for Saratoga Springs */
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&&appid=26c0716e28b534ccf5a476a4f00d54b4';
@@ -28,12 +28,14 @@ function displayResults(weatherData) {
     day_one.innerText = formattDate(`${weatherData.list[0].dt_txt}`);
     /*console.log("line 29,",formattDate(`${weatherData.list[0].dt_txt}`));*/
     temp.innerText = `${weatherData.list[0].main.temp.toFixed(0)} F`;
-    //weather_icon.innerText = `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
+    const iconsrc= `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
+    weather_icon.setAttribute('src',iconsrc);
+    console.log("Line 32,",`${weatherData.list[0].weather[0].icon}`);
     condition.innerText = `${weatherData.list[0].weather[0].description}`;
     humidity.innerText = `${weatherData.list[0].main.humidity}`;
 
 
-    //console.log("Line 31:",`${weatherData.list[0].weather[0].description}`);
+    /*console.log("Line 36:",`${weatherData.list[0].weather[0].description}`);*/
     /*speed.innerText = `${weatherData.list[0].wind.speed.toFixed(0)}`;
     tempcal = weatherData.list[0].wind.speed.toFixed(0);*/
     //console.log("Line 38: ",temp.innerText);

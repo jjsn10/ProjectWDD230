@@ -124,6 +124,12 @@ img{
     display: block;
     text-align: center;
 } 
+#forecast-icon-1{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+}
 
 /* Utilities */
 .container{
