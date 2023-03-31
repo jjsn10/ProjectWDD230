@@ -3,7 +3,7 @@ const condition = document.getElementById('condition');
 const humidity = document.getElementById('humidity');
 
 /*Getting Weather Forecast for Saratoga Springs */
-const url = 'http://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&&appid=26c0716e28b534ccf5a476a4f00d54b4';
+const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&&appid=26c0716e28b534ccf5a476a4f00d54b4';
 
 async function apiFetch() {
     try {
