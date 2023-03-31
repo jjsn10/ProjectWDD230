@@ -116,6 +116,14 @@ img{
     width:80%;
     margin: 0 auto;
 }
+.forecast h1{
+    text-align: center;
+    margin: 0 auto;
+}
+#temp{
+    display: block;
+    text-align: center;
+} 
 
 /* Utilities */
 .container{
