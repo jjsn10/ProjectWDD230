@@ -1,69 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bountiful Foods | Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles/base.css">
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <div class="container flex">
-                <h1>Bountiful Foods</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="fresh.html">Fresh</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>  
-        
-    </header>
-    <main>
-        <section class="showcase">
-            <div class="container grid">
-                <div class="showcase-text">
-                <h1>Find Fresh Fruit</h1>
-                <p>You will find a variety of fresh fruit to prepare healthy juices and meals.
-                   We are company located in Southern Coast of California focus on providing 
-                   a great quality of fruit and vegatables.</p>
-                   <a href="aboutus.html" class="btn btn-outline">Read More</a>   
-                </div>
-                <div class="showcase-form card">
-                    <h2>Request a Demo</h2>
-                    <form action="">
-                        <div class="form-control">
-                            <input type="text" name="name" placeholder="Name" required>
-                        </div>
-                        <div class="form-control">
-                            <input type="text" name="company" placeholder="Company Name" required>
-                        </div>
-                        <div class="form-control">
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
-                        <input type="submit" Value="Send" class="btn btn-primary">
-                    </form>
-                </div>
-            </div>
-        </section>
-        
-        <!--<div class="weather">
-            <span id="temp"></span>
-            <span id="condition"></span>
-            <span id="humidity"></span>
-            
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="styles/app.css">
+    </head>
+    <body>
+        <div class="toolbar">
+            <h1 class="brand">Shop</h1>
+            <p>
+                <a href="cart.html">
+                    Cart items:
+                    <span id="count">0</span>, Price:
+                    <span id="sum">0</span>
+                </a>
+            </p>
         </div>
-        <div class="weather"></div>
-        <div class="weather"></div>-->
-    </main>
-    <footer>
-46546
-    </footer>
-    <!--<script src="scripts/weather.js"></script>-->
-</body>
+
+        <div class="products">
+            <div class="product">
+                <h3>Procut one</h3>
+                <p>Price: 2000</p>
+                <button data-id="1" data-price="2000" data-title="Product one">Add to cart</button>
+            </div>
+
+            <div class="product">
+                <h3>Procut two</h3>
+                <p>Price: 3000</p>
+                <button data-id="2" data-price="3000" data-title="Product two">Add to cart</button>
+            </div>
+
+            <div class="product">
+                <h3>Procut three</h3>
+                <p>Price: 6000</p>
+                <button data-id="3" data-price="6000" data-title="Product three">Add to cart</button>
+            </div>
+
+            <div class="product">
+                <h3>Procut four</h3>
+                <p>Price: 1000</p>
+                <button data-id="4" data-price="1000" data-title="Product four">Add to cart</button>
+            </div>
+        </div>
+
+        <script src="scripts/app.js"></script>
+    </body>
 </html>
