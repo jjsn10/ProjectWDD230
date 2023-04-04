@@ -68,12 +68,12 @@ btnSend.addEventListener('click',()=>{
 
     console.log(name.value);
 
-    document.getElementById('name_order').textContent = `Name: ${name.value}`;
-    document.getElementById('email_order').textContent = `Email: ${email.value}`;
-    document.getElementById('phone_order').textContent = `Phone: ${phone.value}`;
-    document.getElementById('fruit_one').textContent = firstFruit.options[firstFruit.selectedIndex].text;
-    document.getElementById('fruit_two').textContent = secondFruit.options[secondFruit.selectedIndex].text;
-    document.getElementById('fruit_three').textContent = thirdFruit.options[thirdFruit.selectedIndex].text;
+    document.getElementById('name_order').textContent = ` ${name.value}`;
+    document.getElementById('email_order').textContent = ` ${email.value}`;
+    document.getElementById('phone_order').textContent = ` ${phone.value}`;
+    document.getElementById('fruit_one').textContent = ` ${firstFruit.options[firstFruit.selectedIndex].text}`;
+    document.getElementById('fruit_two').textContent = ` ${secondFruit.options[secondFruit.selectedIndex].text}`;
+    document.getElementById('fruit_three').textContent = ` ${thirdFruit.options[thirdFruit.selectedIndex].text}`;
 
     
 
@@ -103,11 +103,11 @@ function calcNutrition(fruits, arrFruitID){
             });
         });
 
-    document.getElementById('calories').textContent = `Calories: ${calories}`;
-    document.getElementById('protein').textContent = `Calories: ${protein}`;
-    document.getElementById('carbohydrates').textContent = `Carbohydrates: ${carbohydrates}`;
-    document.getElementById('fat').textContent = `Fat: ${fat}`;
-    document.getElementById('sugar').textContent = `Sugar: ${sugar}`;
+    document.getElementById('calories').textContent = ` ${calories}`;
+    document.getElementById('protein').textContent = ` ${protein}`;
+    document.getElementById('carbohydrates').textContent = ` ${carbohydrates}`;
+    document.getElementById('fat').textContent = ` ${fat}`;
+    document.getElementById('sugar').textContent = ` ${sugar}`;
     
     //console.log(`Calories: ${calories} \nProtein: ${protein} \nCarbohydrates: ${carbohydrates} \nFat: ${fat} \nSugar: ${sugar}`);
 
