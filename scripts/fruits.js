@@ -60,6 +60,7 @@ btnSend.addEventListener('click',()=>{
     const firstFruit = document.getElementById('first');
     const secondFruit = document.getElementById('second');
     const thirdFruit = document.getElementById('third');
+    const notes = document.getElementById('instructions');
     //console.log("I click on send button");
     arrFruitID.push(firstFruit.value);
     arrFruitID.push(secondFruit.value);
@@ -74,6 +75,7 @@ btnSend.addEventListener('click',()=>{
     document.getElementById('fruit_one').textContent = ` ${firstFruit.options[firstFruit.selectedIndex].text}`;
     document.getElementById('fruit_two').textContent = ` ${secondFruit.options[secondFruit.selectedIndex].text}`;
     document.getElementById('fruit_three').textContent = ` ${thirdFruit.options[thirdFruit.selectedIndex].text}`;
+    document.getElementById('notes').textContent = `${notes.value}`;
 
     
 
