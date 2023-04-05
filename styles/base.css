@@ -2,6 +2,7 @@
 
 :root{
     --primary-color: #047aed;
+    --font-header-footer:#fff;
 }
 *{
     padding: 0;
@@ -110,26 +111,43 @@ img{
 
 }
 /*Weather Forecast*/
+.weather{
+    border: 1px solid grey;
+    width: 60%;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+}
 .forecast, .fruit{
     padding-top: 100px;
     color: black;
     width:80%;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 .forecast h1{
     text-align: center;
     margin: 0 auto;
+    font-weight: bold;
 }
-#temp{
+#temp1, #temp2, #temp3{
     display: block;
     text-align: center;
 } 
-#forecast-icon-1{
+#desc1, #desc2, #desc3{
+    display: block;
+    text-align: center;
+} 
+#humidity1, #humidity2, #humidity3{
+    display: block;
+    text-align: center;
+}
+#forecast-icon-1, #forecast-icon-2, #forecast-icon-3{
     display: block;
     margin: 0 auto;
     width: 50%;
     height: auto;
 }
+
 
 /*Fresh*/
 .fruit form{
@@ -161,6 +179,22 @@ img{
 .fruit form legend{
 }*/
 
+/* footer*/
+footer{
+    background-color: var(--primary-color);
+    color: var(--font-header-footer);
+}
+.logo_bottom{
+    width: 60%;
+    padding: 15px;
+}
+.social-media{
+    font-size: 1.4rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+
 /* Utilities */
 .container{
     max-width: 1100px;
@@ -171,6 +205,12 @@ img{
 .flex{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.flex-space{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
 }
