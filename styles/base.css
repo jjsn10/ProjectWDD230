@@ -140,6 +140,19 @@ img{
     padding: 25px;
     background-color: #047aed;
 }
+.order{
+    grid-column: 2/3;
+    padding: 25px;
+    background-color: #cdcdcd;
+    border-radius: 8px;
+    align-items: center;
+    
+}
+.order h3{
+    grid-column: 1/4;
+    text-align: center;
+    
+}
 /*.fruit form fieldset{
     padding: 15px 20px;
     grid-column: 1/3;
