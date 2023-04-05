@@ -5,7 +5,8 @@ const weather_icon = document.getElementById('forecast-icon-1');
 const day_one = document.getElementById('day-one');
 const day_two = document.getElementById('day-two');
 /*Getting Weather Forecast for Saratoga Springs */
-const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&cnt=3&appid=26c0716e28b534ccf5a476a4f00d54b4';
+//const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&cnt=3&appid=26c0716e28b534ccf5a476a4f00d54b4';
+const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&appid=26c0716e28b534ccf5a476a4f00d54b4';
 
 async function apiFetch() {
     try {
@@ -25,8 +26,16 @@ async function apiFetch() {
 
   /* Showing Weather forecast */
 function displayResults(weatherData) {
+    console.log(weatherData.list[0].dt_txt);
+    console.log(weatherData.list[1].dt_txt);
     console.log(formattDate(weatherData.list[0].dt_txt));
     console.log(formattDate(weatherData.list[1].dt_txt));
+
+    console.log("Line 34:",weatherData.list);
+
+    let forecast = weatherData.list.filter(item => item.dt_txt.search('00:00:00')!= -1);
+    console.log("Line 37:",forecast);
+
     /*date_to_format = `${weatherData.list[0].dt_txt}`;
     console.log("Line 29:",date_to_format);
     day_one.innerText = formattDate(`${weatherData.list[0].dt_txt}`);*/
