@@ -1,9 +1,21 @@
 const temp = document.getElementById('temp');
 const condition = document.getElementById('condition');
 const humidity = document.getElementById('humidity');
-const weather_icon = document.getElementById('forecast-icon-1');
+const weather_icon_1 = document.getElementById('forecast-icon-1');
+const weather_icon_2 = document.getElementById('forecast-icon-2');
+const weather_icon_3 = document.getElementById('forecast-icon-3');
 const day_one = document.getElementById('day-one');
 const day_two = document.getElementById('day-two');
+const day_three = document.getElementById('day-three');
+const temp1 = document.getElementById('temp1');
+const temp2 = document.getElementById('temp2');
+const temp3 = document.getElementById('temp3');
+const desc1 = document.getElementById('desc1');
+const desc2 = document.getElementById('desc2');
+const desc3 = document.getElementById('desc3');
+const humidity1 = document.getElementById('humidity1');
+const humidity2 = document.getElementById('humidity2');
+const humidity3 = document.getElementById('humidity3');
 /*Getting Weather Forecast for Saratoga Springs */
 //const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&cnt=3&appid=26c0716e28b534ccf5a476a4f00d54b4';
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&appid=26c0716e28b534ccf5a476a4f00d54b4';
@@ -36,42 +48,35 @@ function displayResults(weatherData) {
     let forecast = weatherData.list.filter(item => item.dt_txt.search('00:00:00')!= -1);
     console.log("Line 37:",forecast);
 
-    /*date_to_format = `${weatherData.list[0].dt_txt}`;
-    console.log("Line 29:",date_to_format);
-    day_one.innerText = formattDate(`${weatherData.list[0].dt_txt}`);*/
-    /*console.log("line 29,",formattDate(`${weatherData.list[0].dt_txt}`));*/
-    /*temp.innerText = `${weatherData.list[0].main.temp.toFixed(0)} F`;
-    const iconsrc= `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
-    weather_icon.setAttribute('src',iconsrc);*/
+    /*Day One*/
+    day_one.innerText = formattDate(forecast[0].dt_txt);
+    /*console.log("Line 41",forecast[0].dt_txt);*/
+    const iconsrc1= `https://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`;
+    //console.log("Line 46", iconsrc1);
+    weather_icon_1.setAttribute('src',iconsrc1);
+    temp1.innerText = `${forecast[0].main.temp.toFixed(0)} F`;
+    desc1.innerText = `${forecast[0].weather[0].description}`;
+    humidity1.innerText = `Humidity ${forecast[0].main.humidity} %`;
 
-    /*day_two.innerText = formattDate(`${weatherData.list[0].dt_txt}`);*/
-    /*console.log("Line 36:",`${weatherData.list[0].dt_txt}`);*/
-    /*console.log("38:",day_two.innerText)*/
+    /*Day Two*/
+    day_two.innerText = formattDate(forecast[1].dt_txt);
+    /*console.log("Line 41",forecast[0].dt_txt);*/
+    const iconsrc2= `https://openweathermap.org/img/w/${forecast[1].weather[0].icon}.png`;
+    /*console.log("Line 53", iconsrc2);*/
+    weather_icon_2.setAttribute('src',iconsrc2);
+    temp2.innerText = `${forecast[1].main.temp.toFixed(0)} F`;
+    desc2.innerText = `${forecast[1].weather[0].description}`;
+    humidity2.innerText = `Humidity ${forecast[1].main.humidity} %`;
 
-
-    /*console.log("Line 32,",`${weatherData.list[0].weather[0].icon}`);*/
-    /*condition.innerText = `${weatherData.list[0].weather[0].description}`;
-    humidity.innerText = `${weatherData.list[0].main.humidity}`;*/
-
-
-    /*console.log("Line 36:",`${weatherData.list[0].weather[0].description}`);*/
-    /*speed.innerText = `${weatherData.list[0].wind.speed.toFixed(0)}`;
-    tempcal = weatherData.list[0].wind.speed.toFixed(0);*/
-    //console.log("Line 38: ",temp.innerText);
-    //console.log("37: ",weatherData.list[0].wind.speed.toFixed(0));
-    //console.log("Line 39:",tempcal);
-    /*parameters = {
-      'tempcalc': temp.innerText,
-      'speedcalc':speed.innerText
-    }*/
-    /*console.log("line 45",parameters);*/
-    /*const iconsrc = `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
-    const desc = weatherData.list[0].weather[0].description;*/
-
-    /*weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', desc);
-    captionDesc.textContent = desc;
-    calcWindChill(parameters);*/
+    /*Day Three*/
+    day_three.innerText = formattDate(forecast[2].dt_txt);
+    /*console.log("Line 58",forecast[2].dt_txt);*/
+    const iconsrc3= `https://openweathermap.org/img/w/${forecast[2].weather[0].icon}.png`;
+    /*console.log("Line 60", iconsrc3);*/
+    weather_icon_3.setAttribute('src',iconsrc3);
+    temp3.innerText = `${forecast[2].main.temp.toFixed(0)} F`;
+    desc3.innerText = `${forecast[2].weather[0].description}`;
+    humidity3.innerText = `Humidity ${forecast[2].main.humidity} %`;
   }
 
   function formattDate(date_forecast){
