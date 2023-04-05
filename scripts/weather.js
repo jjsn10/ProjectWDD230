@@ -3,8 +3,9 @@ const condition = document.getElementById('condition');
 const humidity = document.getElementById('humidity');
 const weather_icon = document.getElementById('forecast-icon-1');
 const day_one = document.getElementById('day-one');
+const day_two = document.getElementById('day-two');
 /*Getting Weather Forecast for Saratoga Springs */
-const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&&appid=26c0716e28b534ccf5a476a4f00d54b4';
+const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=34&lon=-117&units=imperial&cnt=3&appid=26c0716e28b534ccf5a476a4f00d54b4';
 
 async function apiFetch() {
     try {
@@ -24,15 +25,24 @@ async function apiFetch() {
 
   /* Showing Weather forecast */
 function displayResults(weatherData) {
-    /*date_to_format = `${weatherData.list[0].dt_txt}`;*/
-    day_one.innerText = formattDate(`${weatherData.list[0].dt_txt}`);
+    console.log(formattDate(weatherData.list[0].dt_txt));
+    console.log(formattDate(weatherData.list[1].dt_txt));
+    /*date_to_format = `${weatherData.list[0].dt_txt}`;
+    console.log("Line 29:",date_to_format);
+    day_one.innerText = formattDate(`${weatherData.list[0].dt_txt}`);*/
     /*console.log("line 29,",formattDate(`${weatherData.list[0].dt_txt}`));*/
-    temp.innerText = `${weatherData.list[0].main.temp.toFixed(0)} F`;
+    /*temp.innerText = `${weatherData.list[0].main.temp.toFixed(0)} F`;
     const iconsrc= `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
-    weather_icon.setAttribute('src',iconsrc);
-    console.log("Line 32,",`${weatherData.list[0].weather[0].icon}`);
-    condition.innerText = `${weatherData.list[0].weather[0].description}`;
-    humidity.innerText = `${weatherData.list[0].main.humidity}`;
+    weather_icon.setAttribute('src',iconsrc);*/
+
+    /*day_two.innerText = formattDate(`${weatherData.list[0].dt_txt}`);*/
+    /*console.log("Line 36:",`${weatherData.list[0].dt_txt}`);*/
+    /*console.log("38:",day_two.innerText)*/
+
+
+    /*console.log("Line 32,",`${weatherData.list[0].weather[0].icon}`);*/
+    /*condition.innerText = `${weatherData.list[0].weather[0].description}`;
+    humidity.innerText = `${weatherData.list[0].main.humidity}`;*/
 
 
     /*console.log("Line 36:",`${weatherData.list[0].weather[0].description}`);*/
