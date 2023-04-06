@@ -1,3 +1,254 @@
 @media only screen and (min-width: 1024px){
+    /*body{
+        font-family: 'Lato', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+    header ul{
+        list-style-type: none;
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    h1, h2{
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+    p{
+        margin: 10px 0;
+    }
+    img{
+        width: 100%;
+    }*/
+    /* Navbar */
+    /*.navbar{
+        background-color: var(--primary-color);
+        color: white;
+        height: 70px;
+    }
+    .navbar ul{
+        display: flex;
+    }
+    .navbar a{
+        color: #fff;
+        padding: 10px;
+        margin: 0 5px;
+    }
+    .navbar a:hover{
+        border-bottom: 2px #fff solid;
+    }
+    .navbar .flex{
+        justify-content: space-between;
+    }
+    main{
+        overflow: hidden;
+    }*/
+    /* Showcase*/
+    /*.showcase {
+        height: 400px;
+        background-color: var(--primary-color);
+        color: #fff;
+        position: relative;
+    }
+    .showcase h1{
+        font-size: 40px;
+    }
+    .showcase p{
+        margin: 20px 0;
+    }
+    .showcase .grid{
+        overflow: visible;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+    .showcase-logo{
+        width: 250px;
+    }*/
+    /* Didn't Use*/
+    .showcase-form{
+       position: relative;  
+       top:60px;
+       height:350px;
+       width: 400px;
+       padding: 40px;
+       z-index: 100;
+    }
+    .showcase-form input[type='text'], .showcase-form input[type='email']{
+        border: 0;
+        border-bottom: 1px solid #b4becb;
+        width: 100%;
+        padding: 3px;
+        font-size: 16px;
+    }
+    .showcase-form .form-control{
+        margin:30px 0;
+    }
+    .showcase-form input:focus{
+        outline: none;
+    }
+    .showcase::before, .showcase::after{
+        content: '';
+        position: absolute;
+        height: 100px;
+        bottom: -70px;
+        right: 0;
+        left: 0;
+        background: #fff;
+        transform: skewY(-3deg);
+        -webkit-transform: skewY(-3deg);
+        -moz-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
     
+    }
+    /* End Didn't Use*/
+    /*Weather Forecast*/
+    .weather{
+        border: 1px solid grey;
+        width: 60%;
+        margin: 10px auto;
+        padding: 25px;
+        border-radius: 10px;
+    }
+    /*forecast added to medium*/
+    .forecast, .fruit, .juice, .about{
+        /*changes to 50px in medium css*/
+        padding-top: 100px;
+        color: black;
+        width:80%;
+        margin: 10px auto;
+    }
+    .forecast h2, .juice h2, .fruit h2, .about h2{
+        text-align: center;
+        margin: 25px auto;
+        font-weight: bold;
+        grid-column: 1/4;
+    }
+    .forecast h3{
+        text-align: center;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+    #temp1, #temp2, #temp3{
+        display: block;
+        text-align: center;
+    } 
+    #desc1, #desc2, #desc3{
+        display: block;
+        text-align: center;
+    } 
+    #humidity1, #humidity2, #humidity3{
+        display: block;
+        text-align: center;
+    }
+    #forecast-icon-1, #forecast-icon-2, #forecast-icon-3{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: auto;
+    }
+    /* It was removed to base*/
+    .juice-desc, .desc-about{
+        grid-column: 1/3;
+        padding: 15px;
+        border: 1px solid gray;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    .juice-desc p{
+        text-align: justify;
+    }
+    .btn-fresh{
+        text-align: center;
+        margin: 10px 0;;
+    } 
+    /*Fresh*/
+    .fruit form{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
+        padding: 35px;
+        background-color: #047aed;
+        border-radius: 10px;
+    }
+    .order{
+        grid-column: 2/3;
+        padding: 25px;
+        background-color: #cdcdcd;
+        border-radius: 8px;
+        align-items: center;
+        
+    }
+    .order h3{
+        grid-column: 1/4;
+        text-align: center;
+        
+    }
+    
+    /*About Us*/
+    .desc-about-img img{
+        display: inline;
+        /*border: 1px solid blue;*/
+        width: 95%;
+        border-radius: 10px;
+    }
+        
+    /* Utilities */
+    .container{
+        max-width: 1100px;
+        margin: 0 auto;
+        overflow: auto;
+        padding: 0 40px;
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .flex-space{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .grid-3{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card{
+        background-color: white;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        padding: 20px;
+        margin: 10px;
+    }
+    .btn{
+        display: inline-block;
+        padding: 10px 30px;
+        cursor: pointer;
+        background-color: var(--primary-color);
+        color: white;
+        border:none;
+        border-radius: 5px;
+    }
+    .btn-outline{
+        background-color: transparent;
+        border: 1px #fff solid;
+    }
+    .btn:hover{
+        transform: scale(0.98);
+    }
 }
