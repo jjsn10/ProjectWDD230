@@ -44,11 +44,11 @@
 
             <form action="#" onsubmit="return false;">
                     <label for="first_name">First Name:</label>
-                    <input type="text" name="first_name" id="first_name">
+                    <input type="text" name="first_name" id="first_name"/>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email">
                     <label for="phone">Phone</label>
-                    <input type="tel" name="phone" id="phone">
+                    <input type="tel" name="phone" id="phone" />
                     <label for="first">First Fruit</label>
                     <select name="first" id="first"></select>
                     <label for="second">Second Fruit</label>
@@ -61,7 +61,11 @@
             </form>
 
             <div class="order grid grid-3">
-                <h3>Information 🤷‍♂️</h3>
+                    <h3>Order Date 📅</h3>
+                    <div class="data_info">
+                        <b>Date:</b><span id="order_date"></span>
+                    </div>
+                    <h3>Information 🤷‍♂️</h3>
                     <div class="data_info">
                         <b>Name:</b><span id="name_order"></span>
                     </div>
@@ -97,8 +101,9 @@
                     <div id="data_info">
                         <b>Sugar:</b> <span id="sugar"></span>
                     </div>
-                    <div id="data_info">
-                        <b>Special Instructions:</b> <span id="notes"></span>
+                    <h3>Special Instructions ✔</h3>
+                    <div class="data_info">
+                        <b>Notes:</b> <span id="notes"></span>
                     </div>
 
             </div> 

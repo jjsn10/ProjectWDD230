@@ -68,9 +68,9 @@ btnSend.addEventListener('click',()=>{
     arrFruitID.push(firstFruit.value);
     arrFruitID.push(secondFruit.value);
     arrFruitID.push(thirdFruit.value);
-    console.log(arrFruitID);
+    //console.log(arrFruitID);
 
-    console.log(name.value);
+    //console.log(name.value);
 
     document.getElementById('name_order').textContent = ` ${name.value}`;
     document.getElementById('email_order').textContent = ` ${email.value}`;
@@ -97,13 +97,33 @@ btnSend.addEventListener('click',()=>{
     //console.log("Line 49:",data_fruit);
     calcNutrition(fruitdata.fruits,arrFruitID);
     //console.log("Line 46:",data.then( (data) => console.log(data.fruits[1].name)));
+    getDateOrder();
     resetForm();
 });
 function resetForm(){
     document.forms[0].reset();
 }
-function addLocalStorage(){
-
+function getDateOrder(){
+    const options_date = {
+        day:'2-digit',
+        month:'2-digit',
+        year:'numeric'
+    }
+    const options_time ={
+        hour12:false
+    }
+    //Getting the date without format
+    const getCurrentDate = new Date();
+    
+    //getting and format the year as a number
+    //const year = getCurrentDate.getFullYear();
+    
+    
+    let date_formated = getCurrentDate.toLocaleDateString('en-US',options_date);
+    let current_time = getCurrentDate.toLocaleTimeString('en-US',options_time);
+    
+    let html_date_time = document.getElementById('order_date');
+    html_date_time.textContent =` ${date_formated} ${current_time}`;
 }
 function calcNutrition(fruits, arrFruitID){
     let calories=0;
