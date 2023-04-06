@@ -53,6 +53,9 @@ function populateOptions(fruits,selector){
 const btnSend = document.getElementById('send');
 
 btnSend.addEventListener('click',()=>{
+    //let numDrinks = 0;
+    
+    
     let arrFruitID=[];
     const name = document.getElementById('first_name');
     const email = document.getElementById('email');
@@ -77,15 +80,31 @@ btnSend.addEventListener('click',()=>{
     document.getElementById('fruit_three').textContent = ` ${thirdFruit.options[thirdFruit.selectedIndex].text}`;
     document.getElementById('notes').textContent = `${notes.value}`;
 
-    
+    //Count the drinks using localStorage
+    if(!localStorage.getItem('drinks')){
+        localStorage.setItem('drinks',1);
+    }else{
+        let numDrinks = Number(localStorage.getItem('drinks'))+1;
+        localStorage.setItem('drinks',numDrinks);
+    }
+
+    //numDrinks++;
+
+    //console.log("Line 83:",numDrinks);
 
     //let data_fruit=[];
     //data_fruit = data.then( (data) => console.log("Line 47:", data.fruits));
     //console.log("Line 49:",data_fruit);
     calcNutrition(fruitdata.fruits,arrFruitID);
     //console.log("Line 46:",data.then( (data) => console.log(data.fruits[1].name)));
+    resetForm();
 });
+function resetForm(){
+    document.forms[0].reset();
+}
+function addLocalStorage(){
 
+}
 function calcNutrition(fruits, arrFruitID){
     let calories=0;
     let protein=0;
