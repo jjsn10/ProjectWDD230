@@ -138,6 +138,11 @@ main{
     align-items: center;
     
 }
+.order h3{
+    grid-column: 1/4;
+    text-align: center;
+    
+}
 .juice-desc, .desc-about{
     /* removed */
     grid-column: 1/3;
