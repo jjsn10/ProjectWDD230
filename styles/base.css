@@ -120,13 +120,13 @@ main{
     padding: 25px;
     border-radius: 10px;
 }
-.forecast, .fruit, .juice{
+.forecast, .fruit, .juice, .about{
     padding-top: 100px;
     color: black;
     width:80%;
     margin: 10px auto;
 }
-.forecast h2, .juice h2, .fruit h2{
+.forecast h2, .juice h2, .fruit h2, .about h2{
     text-align: center;
     margin: 25px auto;
     font-weight: bold;
@@ -155,7 +155,7 @@ main{
     width: 50%;
     height: auto;
 }
-.juice-desc{
+.juice-desc, .desc-about{
     grid-column: 1/3;
     padding: 15px;
     border: 1px solid gray;
@@ -222,6 +222,14 @@ main{
     
 }
 
+/*About Us*/
+.desc-about-img img{
+    display: inline;
+    /*border: 1px solid blue;*/
+    width: 95%;
+    border-radius: 10px;
+
+}
 
 /* footer*/
 footer{
