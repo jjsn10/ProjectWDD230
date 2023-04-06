@@ -5,7 +5,7 @@ async function getBusinessData(){
     //console.log(response);
     const data = await response.json();
     //const arrFruitID = [6,35,84];
-    console.log(data.fruits);
+    //console.log(data.fruits);
     //displayBusinesses(data.business);
     populateOptions(data.fruits,'first');
     populateOptions(data.fruits,'second');

@@ -25,7 +25,7 @@ async function apiFetch() {
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
-        console.log(data); // this is for testing the call
+        //console.log(data); // this is for testing the call
         displayResults(data);
       } else {
           throw Error(await response.text());
@@ -38,15 +38,15 @@ async function apiFetch() {
 
   /* Showing Weather forecast */
 function displayResults(weatherData) {
-    console.log(weatherData.list[0].dt_txt);
-    console.log(weatherData.list[1].dt_txt);
-    console.log(formattDate(weatherData.list[0].dt_txt));
-    console.log(formattDate(weatherData.list[1].dt_txt));
+    //console.log(weatherData.list[0].dt_txt);
+    //console.log(weatherData.list[1].dt_txt);
+    //console.log(formattDate(weatherData.list[0].dt_txt));
+    //console.log(formattDate(weatherData.list[1].dt_txt));
 
-    console.log("Line 34:",weatherData.list);
+    //console.log("Line 34:",weatherData.list);
 
     let forecast = weatherData.list.filter(item => item.dt_txt.search('00:00:00')!= -1);
-    console.log("Line 37:",forecast);
+    //console.log("Line 37:",forecast);
 
     /*Day One*/
     day_one.innerText = formattDate(forecast[0].dt_txt);
